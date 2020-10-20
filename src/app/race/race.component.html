@@ -1,0 +1,9 @@
+<h2>Course de poney</h2>
+<p>{{ check() }}</p>
+<div *ngFor="let p of ponies" class="liste-poneys">
+  <app-pony [ponyModel]="p"></app-pony>
+</div>
+<hr style="clear: both" />
+<button (click)="changeColor()">Changer de couleur</button>
+<br />
+Dernier poney modifié : {{dernier}}

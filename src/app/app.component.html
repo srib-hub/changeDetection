@@ -1,15 +1,1 @@
-<div class="container">
-  <h1>Le parent !!!</h1>
-  <p>{{ check() }}</p>
-  Nom : <input type="text" [(ngModel)]="personne.nom" />
-  <hr />
-  <button (click)="personne.age = personne.age + 1">+</button>
-  {{ personne.age }}
-  <button (click)="personne.age = personne.age - 1">-</button>
-  <hr />
-  <pre>{{ personne | json }}</pre>
-  <hr />
-  <app-child [personne]="personne"></app-child>
-  <hr />
-  <button (click)="reassign()">On réassigne le parent</button>
-</div>
+<app-race></app-race>
