@@ -17,10 +17,19 @@ export class RaceComponent implements OnInit {
     {id: 8, color: 'orange'},
     {id: 9, color: 'blue'},
     {id: 10, color: 'yellow'},
+    {id: 11, color: 'green'},
+    {id: 12, color: 'purple'},
+    {id: 13, color: 'orange'},
+    {id: 14, color: 'blue'},
+    {id: 15, color: 'yellow'},
+    {id: 16, color: 'green'},
+    {id: 17, color: 'purple'},
+    {id: 18, color: 'orange'},
+    {id: 19, color: 'blue'},
+    {id: 20, color: 'yellow'},
   ];
 
   public dernier: number;
-  public colors:Array<string> = ['green', 'purple', 'orange', 'blue', 'yellow'];
 
   constructor() { }
 
@@ -29,17 +38,6 @@ export class RaceComponent implements OnInit {
 
   public check() {
     console.log('On rafraichit la course');
-  }
-
-  public changeColor() {
-    const dernier = this.randomNumPony(0, this.ponies.length - 1);
-    const p = this.ponies[dernier];
-    this.ponies[dernier] = { ...p, color: this.randomColor(0, this.colors.length - 1)};
-    this.dernier = dernier;
-  }
-
-  public randomColor(min: number, max: number): string {
-    return this.colors[Math.floor(Math.random() * (max - min + 1)) + min];
   }
 
   public randomNumPony(min: number, max: number): number {
